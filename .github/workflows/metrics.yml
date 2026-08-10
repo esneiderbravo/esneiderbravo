@@ -27,6 +27,16 @@ jobs:
           base: header, repositories
           config_timezone: America/Bogota
           config_animations: yes
+          # Teal brand theme (#0E8E8E) — titles, icons, and contribution calendar
+          extras_css: |
+            h1, h2 { color: #0E8E8E !important; }
+            svg { color: #8b949e; }
+            .field svg { fill: #0E8E8E !important; }
+            .day[fill="#ebedf0"] { fill: rgba(110,118,129,0.14) !important; }
+            .day[fill="#9be9a8"] { fill: #0a4a4a !important; }
+            .day[fill="#40c463"] { fill: #0c6b6b !important; }
+            .day[fill="#30a14e"] { fill: #0E8E8E !important; }
+            .day[fill="#216e39"] { fill: #22c9c9 !important; }
 
       # Languages breakdown (last 8, most used)
       - name: Languages
@@ -39,3 +49,8 @@ jobs:
           plugin_languages_limit: 8
           plugin_languages_sections: most-used
           config_timezone: America/Bogota
+          # Teal title/text; keep each language's brand color
+          extras_css: |
+            h1, h2 { color: #0E8E8E !important; }
+            svg { color: #8b949e; }
+            .field svg { fill: #0E8E8E !important; }
