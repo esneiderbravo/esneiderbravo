@@ -81,11 +81,12 @@ workflows, and human-in-the-loop agents. Author of **[speclaw](https://github.co
 <img height="200" src="./metrics.base.svg" alt="GitHub metrics" />
 <img height="200" src="./metrics.langs.svg" alt="Top languages" />
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=esneiderbravo&hide_border=true&background=00000000&ring=0E8E8E&fire=0E8E8E&currStreakLabel=0E8E8E&sideLabels=8b949e&dates=8b949e&stroke=0E8E8E&currStreakNum=8b949e&sideNums=8b949e" alt="GitHub streak" />
+<img width="98%" src="https://raw.githubusercontent.com/esneiderbravo/esneiderbravo/output/github-snake-dark.svg" alt="Contribution snake" />
+
+<img height="185" src="./metrics.habits.svg" alt="Coding habits" />
+<img height="185" src="https://github-readme-streak-stats.herokuapp.com/?user=esneiderbravo&hide_border=true&background=00000000&ring=0E8E8E&fire=0E8E8E&currStreakLabel=0E8E8E&sideLabels=8b949e&dates=8b949e&stroke=0E8E8E&currStreakNum=8b949e&sideNums=8b949e" alt="GitHub streak" />
 
 <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=esneiderbravo&hide_border=true&bg_color=00000000&color=0E8E8E&line=0E8E8E&point=0E8E8E&area=true&area_color=0E8E8E" alt="Activity graph" />
-
-<img src="https://gitlyy.vercel.app/api/contribution?username=esneiderbravo&hide_border=true" alt="Contribution graph" />
 
 </div>
 
