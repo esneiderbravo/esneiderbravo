@@ -78,8 +78,8 @@ workflows, and human-in-the-loop agents. Author of **[speclaw](https://github.co
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=esneiderbravo&show_icons=true&hide_border=true&title_color=0E8E8E&icon_color=0E8E8E&text_color=8b949e&bg_color=00000000" alt="GitHub stats" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=esneiderbravo&layout=compact&hide_border=true&title_color=0E8E8E&text_color=8b949e&bg_color=00000000" alt="Top languages" />
+<img height="200" src="./metrics.base.svg" alt="GitHub metrics" />
+<img height="200" src="./metrics.langs.svg" alt="Top languages" />
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=esneiderbravo&hide_border=true&background=00000000&ring=0E8E8E&fire=0E8E8E&currStreakLabel=0E8E8E&sideLabels=8b949e&dates=8b949e&stroke=0E8E8E&currStreakNum=8b949e&sideNums=8b949e" alt="GitHub streak" />
 
