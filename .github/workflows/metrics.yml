@@ -68,3 +68,8 @@ jobs:
           extras_css: |
             h1, h2 { color: #0E8E8E !important; }
             svg { color: #8b949e; }
+            [fill="#ebedf0"] { fill: rgba(110,118,129,0.18) !important; }
+            [fill="#9be9a8"] { fill: #0a4a4a !important; }
+            [fill="#40c463"] { fill: #0c6b6b !important; }
+            [fill="#30a14e"] { fill: #0E8E8E !important; }
+            [fill="#216e39"] { fill: #22c9c9 !important; }
