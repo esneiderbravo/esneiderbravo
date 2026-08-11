@@ -77,7 +77,7 @@ workflow. <b>No LLM, no cloud, 100% local.</b> CLI <b>+</b> MCP.
 <td width="50%"><img width="100%" src="./metrics.langs.svg" alt="Top languages" /></td>
 </tr>
 <tr>
-<td colspan="2" align="center"><img width="100%" src="./metrics.calendar.svg" alt="Contribution calendar" /></td>
+<td colspan="2" align="center"><img width="100%" src="https://ghchart.rshah.org/40c463/esneiderbravo" alt="Contribution calendar" /></td>
 </tr>
 <tr>
 <td colspan="2"><img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=esneiderbravo&hide_border=true&bg_color=00000000&color=0E8E8E&line=0E8E8E&point=22c9c9&area=true&area_color=0E8E8E&title_color=0E8E8E&font_color=8b949e&day=Mon" alt="Activity graph (by month)" /></td>
