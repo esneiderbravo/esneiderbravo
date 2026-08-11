@@ -54,3 +54,17 @@ jobs:
             h1, h2 { color: #0E8E8E !important; }
             svg { color: #8b949e; }
             .field svg { fill: #0E8E8E !important; }
+
+      # Isometric 3D contribution calendar (full year)
+      - name: Isometric calendar
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: metrics.isocalendar.svg
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          config_timezone: America/Bogota
+          extras_css: |
+            h1, h2 { color: #0E8E8E !important; }
+            svg { color: #8b949e; }
