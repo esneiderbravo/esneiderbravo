@@ -63,7 +63,7 @@ jobs:
           filename: metrics.calendar.svg
           base: ""
           plugin_calendar: yes
-          plugin_calendar_limit: 0
+          plugin_calendar_limit: 1
           config_timezone: America/Bogota
           extras_css: |
             h1, h2 { color: #0E8E8E !important; }
