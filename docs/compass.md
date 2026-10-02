@@ -31,9 +31,13 @@ a request, not whole files.
 |------|-----------|
 | `compass_index` | Build/refresh the graph (`.speclaw/index.db`). Incremental — unchanged files are skipped by hash. Run once after init and after significant edits. |
 | `compass_explore` | Read a node's verbatim source plus its callers and callees. The default before editing. |
-| `compass_search` | Structural search: find nodes by name/keyword. |
+| `compass_find` | Structural search: find nodes by name/keyword. `compass_search` is a deprecated alias. |
 | `compass_recall` | Semantic search: describe what you want in natural language and get nodes ranked by meaning. |
-| `compass_impact` | Blast radius: every node that transitively calls a target — "what could break if I change this?" before editing. |
+| `compass_impact` | Blast radius. Grouped by default; `format: flat` returns the flat list. |
+| `compass_affected_tests` | Tests touched by a change. CLI: `speclaw affected-tests --from-diff`. |
+| `compass_hotspots` | Activity × AST health. CLI: `speclaw hotspots`. Default history window is 90 days. |
+| `compass_coupling` | Coupling (Jaccard strength, `in_graph`, `isTestPair`). CLI: `speclaw coupling`. |
+| `compass_diff_context` | Diff-scoped context for a change. |
 | `compass_trace` | Trace a call path between two nodes — how an entrypoint reaches a sink. |
 | `compass_watch` | Keep the index fresh automatically (start/stop a debounced incremental re-index on file change). |
 
@@ -41,6 +45,13 @@ If the graph is missing (no `.speclaw/index.db`), run `compass_index` first —
 a missing graph is not license to skip Compass. The only legitimate fallbacks
 to Grep/Read: a Compass call returned nothing useful for your query, or the
 target isn't indexed code (stylesheets, JSON/config, markdown, logs).
+
+Compass schema is **10**. After a speclaw upgrade, reindex with `speclaw index`.
+Optional `.speclaw/affected.json` overrides global and test globs for
+`affected-tests`.
+
+<!-- speclaw:map:start -->
+<!-- speclaw:map:end -->
 
 ## Project-specific starting points
 

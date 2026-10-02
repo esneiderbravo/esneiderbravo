@@ -12,4 +12,16 @@ mandatory_task_steps:
   - "Archive the change within the same PR (lawbook:archive)."
 
 # A change is required for new behavior, endpoints, schema changes, or UI flows;
-# one-line fixes need not have one.
+# one-line fixes may use ceremony level 0 (`speclaw quick`) instead of full artifacts.
+
+# Ceremony levels (adaptive). Defaults match speclaw's built-in thresholds.
+ceremony:
+  cuts: [3, 8, 15]
+  hotspotFloor: 0.7
+
+# Requirement → impl → test coverage (`speclaw coverage`).
+# This repo has no application code or test runner, so archive is not gated on
+# impl/utest coverage. Requirements can still declare `Needs:` when they have some.
+coverage:
+  gateArchive: false
+  defaultNeeds: []

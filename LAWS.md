@@ -16,13 +16,14 @@
 |-----|------|---------|
 | Base | [`docs/standards/base-standards.md`](docs/standards/base-standards.md) | Languages, commits, comments, dependencies, engineering principles |
 | Architecture | [`docs/standards/architecture.md`](docs/standards/architecture.md) | Modules/bounded contexts, layering, cross-boundary rules |
-| Backend | [`docs/standards/backend-standards.md`](docs/standards/backend-standards.md) | Backend layers, docstrings, typing, tests, migrations |
-| Frontend | [`docs/standards/frontend-standards.md`](docs/standards/frontend-standards.md) | Frontend layers, rendering boundaries, state, i18n, UI |
+| Backend | [`docs/standards/backend-standards.md`](docs/standards/backend-standards.md) | Automation / executable logic — the GitHub Actions metrics workflow (no app backend) |
+| Frontend | [`docs/standards/frontend-standards.md`](docs/standards/frontend-standards.md) | Profile markup — README structure, embedded assets, badges, brand (no app frontend) |
 | Testing | [`docs/standards/testing-standards.md`](docs/standards/testing-standards.md) | Quality gates, what must be tested, verification |
 | Documentation | [`docs/standards/documentation.md`](docs/standards/documentation.md) | Docstring/API-comment convention per language |
 | Conventions | [`docs/standards/conventions.md`](docs/standards/conventions.md) | Branches, PRs, tracker, versioning |
-| Lawbook | [`docs/standards/lawbook.md`](docs/standards/lawbook.md) | Spec-driven workflow, mandatory task steps, archiving |
+| Lawbook | [`docs/standards/lawbook.md`](docs/standards/lawbook.md) | Spec-driven workflow, ceremony levels, archiving |
 | Compass | [`docs/compass.md`](docs/compass.md) | Using the code knowledge graph first — before any grep/read |
+| Cortex | [`docs/cortex.md`](docs/cortex.md) | Multi-agent loop that runs a lawbook change |
 
 ## Binding rules
 
@@ -33,8 +34,8 @@
 3. **Amendments go through the lawbook workflow.** A standard is changed like code — via a
    reviewed change (see the lawbook law). An agent may propose an amendment;
    it may never silently ignore a standard.
-4. **Entry points reference the law.** [`CLAUDE.md`](CLAUDE.md) and
-   [`AGENTS.md`](AGENTS.md) point every agent here first.
+4. **Entry points reference the law.** [`AGENTS.md`](AGENTS.md) is the shared
+   agent contract. [`CLAUDE.md`](CLAUDE.md) only imports it.
 
 ## Project-specific laws (profile repo)
 
