@@ -20,11 +20,11 @@ automation areas below, derived from the real directory layout:
 
 | Module | Responsibility |
 |--------|----------------|
-| Profile README (`README.md`) | The rendered GitHub profile page — hero banner, flagship + selected-work cards, live GitHub metrics section, contact badges |
+| Profile README (`README.md`) | The rendered GitHub profile page — hero banner, Creator of SpecLaw section, flagship + selected-work cards, live GitHub metrics section, contact badges |
 | Metrics automation (`.github/workflows/metrics.yml`, `metrics.*.svg`) | Daily GitHub Actions job that regenerates the stats and top-languages SVGs via lowlighter/metrics, themed in the teal brand |
 | speclaw foundation (`LAWS.md`, `docs/standards/*`, `docs/compass.md`) | The constitution and standards that bind every agent working in this repo |
 | Lawbook workflow (`lawbook/`, `ai-specs/skills`, `ai-specs/commands`) | Spec-driven change workflow: draft → build → sync → archive |
-| Agent context (`CLAUDE.md`, `AGENTS.md`, `ai-specs/agents`) | Multi-IDE entry points and subagent definitions |
+| Agent context (`AGENTS.md`, `CLAUDE.md`, `ai-specs/agents`) | `AGENTS.md` is the shared contract; `CLAUDE.md` only imports it. Subagent definitions live in `ai-specs/agents` |
 
 
 ## Layering
@@ -35,7 +35,7 @@ would be:
 
 - **Source of truth is `README.md`.** It embeds committed assets by relative
   path (`./metrics.base.svg`, `./metrics.langs.svg`) and themed remote services
-  (shields.io, ghchart, capsule-render, readme-typing-svg, activity-graph).
+  (shields.io, ghchart, capsule-render, readme-typing-svg).
   Content changes happen here.
 - **Generated SVGs are produced only by the metrics workflow.**
   `metrics.base.svg` and `metrics.langs.svg` are outputs — never hand-edited.

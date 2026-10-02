@@ -1,0 +1,66 @@
+{
+  "lockfileVersion": 1,
+  "generator": "@esneiderbravo/speclaw@2.0.1",
+  "algorithm": "sha256",
+  "root": "sha256:69e2d1458b5cf69a0f648d158d23c23478051a8f2350b13b552520058bc9b1f8",
+  "files": {
+    ".github/instructions/law-no-secrets-in-repo-1.instructions.md": {
+      "digest": "sha256:b52ce9f9a77fb503babeed8da12e66c0cd3987b25429f8421431011f89bd46a1",
+      "ownership": "strict"
+    },
+    "AGENTS.md": {
+      "digest": "sha256:4913e805b3146514f271fdd406b0b6f38abfa88062cd45dbd44248c204f6fefe",
+      "ownership": "strict"
+    },
+    "CLAUDE.md": {
+      "digest": "sha256:77d98c7436df6420fe1c914b855b120eacf44a5190a9b8c59496eda6abfa07f0",
+      "ownership": "strict"
+    },
+    "LAWS.md": {
+      "digest": "sha256:91a4d3f4035c01908d04fa7889c346e3891b41ba6c8457019c8720ca08cc329e",
+      "ownership": "advisory"
+    },
+    "docs/compass.md": {
+      "digest": "sha256:ff97a53040a0e73382baa104235ccbe64f401c9abcecf49aacc64c38918a48db",
+      "ownership": "advisory"
+    },
+    "docs/standards/architecture.md": {
+      "digest": "sha256:42bba46fad68fd4b02a4640ef620bcb1aa1d712edb0f2cebaff2c68210476e62",
+      "ownership": "advisory"
+    },
+    "docs/standards/backend-standards.md": {
+      "digest": "sha256:3799e6bcae5bf0572b10d3d64fb613eee99975132f42f1e084a52c493a3a1d60",
+      "ownership": "advisory"
+    },
+    "docs/standards/base-standards.md": {
+      "digest": "sha256:97f5677c3a3751ed4eff46597e82a166bbd7c048777c79799df2eb8dbb3b36bb",
+      "ownership": "advisory"
+    },
+    "docs/standards/conventions.md": {
+      "digest": "sha256:fe830f26ff340192570db6dc83e14b0fc7b5187b3028fe27a58e05f063629ddb",
+      "ownership": "advisory"
+    },
+    "docs/standards/documentation.md": {
+      "digest": "sha256:8bd9ca2e5a194c6630d9ee4f8610e559ff1eab13886d0214d2a042d3fe753acc",
+      "ownership": "advisory"
+    },
+    "docs/standards/frontend-standards.md": {
+      "digest": "sha256:b3831ff08d770057adf7ac585838a8e17a4bcd1fb4bdcb242c2f20e8e6ad151c",
+      "ownership": "advisory"
+    },
+    "docs/standards/lawbook.md": {
+      "digest": "sha256:c7a6c78b92ea9bc20a5c24af7e6af4f9015464f8614f00d3d9cc66e9817bdc05",
+      "ownership": "advisory"
+    },
+    "docs/standards/testing-standards.md": {
+      "digest": "sha256:41398d633bcfd23abaafa03c6c97e2e1c17160e04be22282a50aa31424bdf427",
+      "ownership": "advisory"
+    }
+  },
+  "symlinks": {
+    ".claude/rules/speclaw": {
+      "target": "../../ai-specs/rules"
+    }
+  },
+  "accepted": []
+}

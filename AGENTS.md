@@ -2,7 +2,7 @@
 
 Operating contract for **every** AI agent (Claude Code, Cursor, Codex, or any
 other) working in this repository. These rules are STRICT and non-negotiable.
-Claude-specific notes: [`CLAUDE.md`](CLAUDE.md). The law: [`LAWS.md`](LAWS.md).
+[`CLAUDE.md`](CLAUDE.md) only imports this file. The law: [`LAWS.md`](LAWS.md).
 
 ## Project
 
@@ -17,16 +17,24 @@ Claude-specific notes: [`CLAUDE.md`](CLAUDE.md). The law: [`LAWS.md`](LAWS.md).
    it. Conflicts resolve in favor of the standard; amendments go through a
    spec change, never silent deviation.
 2. **Compass first, always** — for any code question call `compass_explore` /
-   `compass_search` / `compass_recall` **before** any grep/sed/cat/Read,
-   including files you already know by name. Fall back to manual file tools only
-   after Compass returns nothing useful, the graph is missing (`compass_index`
-   first), or the target isn't indexed code (stylesheets, config, logs). Cheat
-   sheet: [`docs/compass.md`](docs/compass.md).
-3. **Follow the lawbook workflow** for every non-trivial change; archive
-   within the same PR. Rules:
-   [`docs/standards/lawbook.md`](docs/standards/lawbook.md).
-4. **Run the quality gates yourself** before declaring anything done — see
-   [`docs/standards/testing-standards.md`](docs/standards/testing-standards.md):
+   `compass_find` / `compass_recall` **before** any grep/sed/cat/Read,
+   including files you already know by name. Knowing the filename is not an
+   exemption. Fall back to manual file tools only after Compass returns nothing
+   useful, the graph is missing (`compass_index` first), or the target isn't
+   indexed code (stylesheets, config, logs, markdown, generated files,
+   lockfiles). Cheat sheet: [`docs/compass.md`](docs/compass.md).
+3. **Follow Cortex** (*One brain. Many agents.*) for every non-trivial change;
+   archive within the same PR. The primary agent is the **coordinator**
+   (`cortex` skill / `/lawbook/cortex`) — it does not implement the profile
+   change itself. It dispatches explorer → planner → implementer → reviewer →
+   tester → archiver. Drive state with the `cortex` MCP tool or
+   `speclaw cortex`. Artifact volume follows the ceremony level in
+   `change.json`; a missing `change.json` is level 3. Rules:
+   [`docs/standards/lawbook.md`](docs/standards/lawbook.md) and
+   [`docs/cortex.md`](docs/cortex.md).
+4. **Run the quality gates yourself** before declaring anything done — the
+   **tester** role owns this under Cortex, and never claims a gate it did not
+   run. See [`docs/standards/testing-standards.md`](docs/standards/testing-standards.md):
    - Tests: No test runner (no application code). Verification = the README renders correctly on the GitHub profile and the Metrics GitHub Action completes green.
    - Lint / type-check: No linter configured. Optional Markdown hygiene: `npx --yes markdownlint-cli2 "**/*.md"`; validate the workflow YAML before pushing.
 5. **Respect the conventions** — trunk-based (commits land directly on `main`;
@@ -35,26 +43,17 @@ Claude-specific notes: [`CLAUDE.md`](CLAUDE.md). The law: [`LAWS.md`](LAWS.md).
    code that reads like its neighbors. See
    [`docs/standards/base-standards.md`](docs/standards/base-standards.md) and
    [`docs/standards/conventions.md`](docs/standards/conventions.md).
-6. **Use the skills.** `ai-specs/` is the canonical home for skills, commands,
-   and subagents, mirrored to each IDE directory via symlinks.
+6. **Use the skills and role agents.** `ai-specs/` is the canonical home for
+   skills, commands, rules, and agents, mirrored to each IDE directory via
+   symlinks.
 7. **Ask before irreversible or outward-facing actions** — destructive commands;
    writing to a real data store (DB rows or files with real user data, including
    for tests — verify against an isolated/throwaway store); publishing
-   reviews/tickets/comments.
+   reviews/tickets/comments. Planner questions go to the human via the
+   coordinator.
 
-## The standards (the law, in detail)
-
-| Standard | Governs |
-|----------|---------|
-| [`docs/standards/base-standards.md`](docs/standards/base-standards.md) | Languages, commits, comments, dependencies |
-| [`docs/standards/architecture.md`](docs/standards/architecture.md) | Modules, layering, boundaries |
-| [`docs/standards/backend-standards.md`](docs/standards/backend-standards.md) | Automation / executable logic — the GitHub Actions metrics workflow (no app backend) |
-| [`docs/standards/frontend-standards.md`](docs/standards/frontend-standards.md) | Profile markup — README structure, embedded assets, badges, brand (no app frontend) |
-| [`docs/standards/testing-standards.md`](docs/standards/testing-standards.md) | Quality gates, testing rules |
-| [`docs/standards/documentation.md`](docs/standards/documentation.md) | Docstring/API-comment convention per language |
-| [`docs/standards/conventions.md`](docs/standards/conventions.md) | Branches, PRs, tracker, versioning |
-| [`docs/standards/lawbook.md`](docs/standards/lawbook.md) | Spec-driven workflow, archiving |
-| [`docs/compass.md`](docs/compass.md) | Compass usage |
+The standards are listed in [`LAWS.md`](LAWS.md). speclaw tooling notes:
+[`docs/speclaw.md`](docs/speclaw.md).
 
 ## Directory map for agents
 
@@ -62,8 +61,25 @@ Claude-specific notes: [`CLAUDE.md`](CLAUDE.md). The law: [`LAWS.md`](LAWS.md).
 | --- | --- |
 | `LAWS.md` | The constitution — binds the standards |
 | `docs/standards/` | The individual laws (one file per standard) |
-| `AGENTS.md` / `CLAUDE.md` | Agent entry points (this contract) |
+| `AGENTS.md` | The shared agent contract |
+| `CLAUDE.md` | Claude Code import of this file; no separate rules |
 | `ai-specs/` | Canonical skills, commands, rules, agents |
 | `.claude/` `.cursor/` `.codex/` `.agents/` | IDE mirrors (symlinks into `ai-specs/`) |
-| `lawbook/` | Spec-driven workflow: specs, changes, archive |
+| `lawbook/` | Spec-driven workflow: specs, changes, archive, anchors |
+| `docs/compass.md` | Compass cheat sheet |
+| `docs/cortex.md` | Cortex coordinator cheat sheet |
+| `docs/speclaw.md` | speclaw install, MCP, coverage, drift, lock |
+| `speclaw.lock` | Committed digests of managed rule files (repo root, never under `.speclaw/`) |
 | `.mcp.json` | MCP wiring (speclaw) |
+
+<!-- speclaw:laws:start -->
+## speclaw laws (generated)
+
+_Edit `docs/standards/*.md` or `.speclaw/laws-manifest.json`; do not edit this block._
+
+## Scoped rules
+
+### No secrets in the repository (`law~no-secrets-in-repo~1`)
+
+In files that match `**/.env`, `**/.env.*`, `**/*.env`, Never write a .env file into the repository. Secrets live in the environment, not in version control.
+<!-- speclaw:laws:end -->

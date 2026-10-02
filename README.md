@@ -17,6 +17,19 @@
 
 <br/>
 
+<div align="center"><h3>🛠️ &nbsp;Creator of SpecLaw</h3></div>
+
+<p align="center">
+I created <a href="https://github.com/esneiderbravo/speclaw"><b>SpecLaw</b></a> so AI agents follow a repository's written laws.
+It ships as <b>speclaw</b> — open source and 100% local.
+</p>
+
+<p align="center">
+<a href="https://github.com/esneiderbravo/speclaw"><img src="https://img.shields.io/github/stars/esneiderbravo/speclaw?color=0E8E8E&labelColor=0B0F10&style=for-the-badge&logo=github&logoColor=white" alt="speclaw stars on GitHub" /></a>
+&nbsp;<a href="https://www.npmjs.com/package/@esneiderbravo/speclaw"><img src="https://img.shields.io/npm/v/@esneiderbravo/speclaw?color=0E8E8E&labelColor=0B0F10&style=for-the-badge&logo=npm&label=speclaw" alt="speclaw on npm" /></a>
+&nbsp;<a href="https://github.com/esneiderbravo/speclaw/blob/main/LICENSE"><img src="https://img.shields.io/github/license/esneiderbravo/speclaw?color=0E8E8E&labelColor=0B0F10&style=for-the-badge" alt="speclaw license" /></a>
+</p>
+
 <div align="center"><h3>⭐ &nbsp;Flagship</h3></div>
 
 <a href="https://github.com/esneiderbravo/speclaw"><img src="https://opengraph.githubassets.com/speclaw-flagship/esneiderbravo/speclaw" width="100%" alt="speclaw — specs become law" /></a>
@@ -78,9 +91,6 @@ workflow. <b>No LLM, no cloud, 100% local.</b> CLI <b>+</b> MCP.
 </tr>
 <tr>
 <td colspan="2" align="center"><img width="100%" src="https://ghchart.rshah.org/40c463/esneiderbravo" alt="Contribution calendar" /></td>
-</tr>
-<tr>
-<td colspan="2"><img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=esneiderbravo&hide_border=true&bg_color=00000000&color=0E8E8E&line=0E8E8E&point=22c9c9&area=true&area_color=0E8E8E&title_color=0E8E8E&font_color=8b949e&day=Mon" alt="Activity graph (by month)" /></td>
 </tr>
 </table>
 
